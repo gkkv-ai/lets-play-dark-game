@@ -1,0 +1,130 @@
+.completion-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #1a0812 0%, #050108 100%);
+
+  .confetti-dot {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .completion-card {
+    max-width: 420px;
+    width: 100%;
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+
+    .trophy-wrap {
+      .trophy-icon {
+        color: #d4af37;
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
+      }
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #f5e6d3;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #80607a;
+      font-size: 0.95rem;
+      margin-top: -0.75rem;
+    }
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    border: 1px solid rgba(139, 26, 74, 0.2);
+  }
+
+  .stat-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+
+    svg { color: #8b1a4a; }
+
+    .val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #f5e6d3;
+      line-height: 1;
+    }
+
+    .label {
+      font-size: 0.65rem;
+      color: #60404a;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    &.accent svg { color: #d4af37; }
+    &.accent .val { color: #d4af37; }
+  }
+
+  .completion-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+
+    .btn-restart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem;
+      background: linear-gradient(135deg, #8b1a4a, #6b0f2e);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 12px;
+      color: #f5e6d3;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: 'Playfair Display', serif;
+      transition: all 0.2s;
+
+      &:hover { opacity: 0.9; }
+    }
+
+    .btn-levels {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 12px;
+      color: #d4af37;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover { background: rgba(212, 175, 55, 0.2); }
+    }
+  }
+}
+

@@ -1,0 +1,192 @@
+.dare-grid-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.25rem 3rem;
+  background: linear-gradient(180deg, #0d0208 0%, #050108 100%);
+  overflow-x: hidden;
+
+  .dare-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 640px;
+    padding: 1.25rem 0 0.5rem;
+
+    .back-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(139, 26, 74, 0.3);
+      background: rgba(139, 26, 74, 0.1);
+      color: #c08090;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+
+      &:hover { background: rgba(139, 26, 74, 0.25); color: #f5c6d5; }
+    }
+
+    .header-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.1rem;
+      text-align: center;
+
+      .level-label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: rgba(212, 175, 55, 0.5);
+        font-weight: 700;
+      }
+
+      .level-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 1rem;
+        color: #f5e6d3;
+      }
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 0.5rem;
+
+      .pause-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgba(139, 26, 74, 0.3);
+        background: rgba(139, 26, 74, 0.1);
+        color: #c08090;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+
+        &:hover { background: rgba(139, 26, 74, 0.25); color: #f5c6d5; }
+        &.paused { background: rgba(139, 26, 74, 0.4); color: #f5c6d5; border-color: rgba(139, 26, 74, 0.6); }
+      }
+    }
+  }
+
+  .paused-banner {
+    width: 100%;
+    max-width: 640px;
+    padding: 0.6rem 1rem;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+    color: #d4af37;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .progress-wrap {
+    width: 100%;
+    max-width: 640px;
+    margin: 0.75rem 0;
+  }
+
+  .action-bar {
+    display: flex;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 640px;
+    margin-bottom: 1.25rem;
+    align-items: center;
+
+    .btn-random {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.25rem;
+      background: linear-gradient(135deg, #8b1a4a80, #6b0f2e80);
+      border: 1px solid rgba(139, 26, 74, 0.5);
+      border-radius: 999px;
+      color: #f5c6d5;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      flex: 1;
+      justify-content: center;
+
+      &:hover { background: linear-gradient(135deg, #8b1a4a, #6b0f2e); }
+      &:disabled { opacity: 0.4; cursor: not-allowed; }
+    }
+
+    .btn-manage {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1rem;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 999px;
+      color: #d4af37;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      flex: 1;
+      justify-content: center;
+
+      &:hover { background: rgba(212, 175, 55, 0.2); }
+      &:disabled { opacity: 0.4; cursor: not-allowed; }
+    }
+
+    .btn-reset-lvl {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(100, 60, 70, 0.4);
+      background: rgba(60, 20, 30, 0.4);
+      color: #80505a;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+
+      &:hover { background: rgba(100, 30, 50, 0.6); color: #c08090; }
+    }
+  }
+
+  .dare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 640px;
+
+    @media (min-width: 480px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .stop-game-btn {
+    margin-top: 2rem;
+    background: none;
+    border: none;
+    color: #3a2028;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+
+    &:hover { color: #80505a; }
+  }
+}
+

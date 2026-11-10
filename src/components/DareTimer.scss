@@ -1,0 +1,101 @@
+.dare-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  background: rgba(139, 26, 74, 0.1);
+  border: 1px solid rgba(139, 26, 74, 0.3);
+  border-radius: 16px;
+
+  .timer-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #d4af37;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .timer-ring {
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    .ring-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .ring-bg {
+      fill: none;
+      stroke: rgba(139, 26, 74, 0.2);
+      stroke-width: 5;
+    }
+
+    .ring-progress {
+      fill: none;
+      stroke-width: 5;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1s linear;
+    }
+
+    .timer-display {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .time-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.1rem;
+        color: #f5e6d3;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .done-text {
+        font-size: 0.9rem;
+        color: #d4af37;
+        font-family: 'Playfair Display', serif;
+      }
+    }
+  }
+
+  .timer-controls {
+    display: flex;
+    gap: 0.5rem;
+
+    .timer-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(139, 26, 74, 0.6);
+      background: rgba(139, 26, 74, 0.3);
+      color: #f5c6d5;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+
+      &:hover { background: rgba(139, 26, 74, 0.6); }
+      &:disabled { opacity: 0.4; cursor: not-allowed; }
+
+      &.reset {
+        background: rgba(60, 20, 30, 0.5);
+        border-color: rgba(80, 30, 40, 0.6);
+        color: #90607a;
+      }
+    }
+  }
+
+  .timer-done-msg {
+    font-size: 0.82rem;
+    color: #d4af37;
+    text-align: center;
+  }
+}
+
