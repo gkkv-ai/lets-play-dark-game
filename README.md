@@ -66,3 +66,4 @@ npm run preview
 ## 🔒 Privacy & Consent
 
 This application runs 100% locally in the browser with zero backend data collection. All progress, custom dares, and settings are saved strictly on your local device. Either partner can pause, skip, or stop at any time.
+
